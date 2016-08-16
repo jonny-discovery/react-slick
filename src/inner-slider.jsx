@@ -62,6 +62,10 @@ export var InnerSlider = React.createClass({
     }
   },
   componentWillReceiveProps: function(nextProps) {
+    this.setState({
+      animating: false
+    });
+
     if (this.props.slickGoTo != nextProps.slickGoTo) {
       this.changeSlide({
           message: 'index',
